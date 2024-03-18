@@ -2,4 +2,4 @@
 
 Projet collectif DataViZ  
 La Fusée :  
-Boris, Carlos, Céline, Maxime
+Boris, Carlos, Céline, Maxime1
