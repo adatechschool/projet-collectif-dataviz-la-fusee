@@ -1,5 +1,35 @@
+
+
+html, body {
+   margin: 0 auto;
+   width: 100%;
+}
+
+header {
+   position: sticky;
+   margin: 0;
+   padding: 10px 5px;
+   top: 0;
+   width: 100%;
+   background-color: #42b4caff;
+   display: flex;
+   justify-content:space-between;
+   box-shadow: 0 5px 5px #BFDE42FF;
+}
+
 #nav {
-   background-color: #42B4CAFF;
+   margin-right: 2vw;
+   display: flex;
+   gap: 15px;
+   align-items: center;
+   font-size: large;
+}
+
+#nav a {
+   color: black;
+   text-shadow: #BFDE42FF 1px 0 10px;
+   font-style: normal;
+   text-decoration: none;
 }
 
 main {
