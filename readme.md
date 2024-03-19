@@ -3,9 +3,5 @@
 Projet collectif DataViZ  
 La Fusée :  
 Boris, Carlos, Céline, Maxime1
-TRY
-sdqjksjkqsjk
 
-👍
-azer
 
