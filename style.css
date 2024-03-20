@@ -1,6 +1,5 @@
-
-
-html, body {
+html,
+body {
    margin: 0 auto;
    width: 100%;
 }
@@ -13,8 +12,8 @@ header {
    width: 100%;
    background-color: #42b4caff;
    display: flex;
-   justify-content:space-between;
-   box-shadow: 0 5px 5px #BFDE42FF;
+   justify-content: space-between;
+   box-shadow: 0 5px 5px #bfde42ff;
 }
 
 #nav {
@@ -27,11 +26,50 @@ header {
 
 #nav a {
    color: black;
-   text-shadow: #BFDE42FF 1px 0 10px;
+   text-shadow: #bfde42ff 1px 0 10px;
    font-style: normal;
    text-decoration: none;
 }
 
 main {
    display: flex;
+}
+
+/*Page One Episode*/
+#episode_title {
+   margin-left: 2vw;
+}
+
+.episode {
+   margin-left: 1vw;
+}
+
+.episode h1 {
+   margin-bottom: 5px;
+   color: black;
+   text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+}
+
+.episode_subtitle {
+   margin-top: 0;
+   font-size: 1.3em;
+}
+
+.episode_code .episode_aired {
+   margin: 0 10px;
+}
+
+.episode_characters ul {
+   padding: 0;
+   margin-right: 3vw;
+   list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   row-gap: 10px;
+}
+
+.episode_characters li {
+   width: 150px;
+   border: solid black 2px;
 }
