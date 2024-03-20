@@ -1,11 +1,39 @@
 // Welcome
+
 const charContainer = document.querySelector("#charContainer");
+const btnPrevious = document.querySelector("#btnPrevious");
+const btnNext = document.querySelector("#btnNext");
 
 async function displayCharacters() {
     try {
-        const characterAll = await fetch("https://rickandmortyapi.com/api/character");
+
+        let idPage;
+
+        const params = new URLSearchParams(window.location.search)
+        idPage = params.get("page")
+
+        let characterAll = await fetch(`https://rickandmortyapi.com/api/character?page=${idPage}`);
         const characterAllJson = await characterAll.json();
         const characterAllResults = await characterAllJson.results;
+        const characterAllInfo = await characterAllJson.info;
+
+        // ==== IDs des pages
+        let regex = /[1-9]/
+        const URLPageNext = characterAllInfo.next
+        let idPageNext = null
+        if (URLPageNext) {
+            idPageNext = URLPageNext.split("").filter((el) => regex.test(el)).join("")
+        }
+
+        const URLPagePrev = characterAllInfo.prev
+        let idPagePrev = null;
+        if (URLPagePrev) {
+            idPagePrev = URLPagePrev.split("").filter((el) => regex.test(el)).join("")
+        }
+        console.log(idPagePrev)
+        console.log(idPageNext)
+        console.log(characterAllResults)
+        console.log(characterAllInfo)
 
         characterAllResults.forEach((data) => {
 
@@ -13,7 +41,6 @@ async function displayCharacters() {
             const newImg = document.createElement("img");
 
             newImg.setAttribute("src", `https://rickandmortyapi.com/api/character/avatar/${data.id}.jpeg`);
-            newImg.setAttribute("id", "test");
 
             newDiv.append(newImg);
             newDiv.append(data.name);
@@ -25,10 +52,24 @@ async function displayCharacters() {
 
         })
 
-        console.log(characterAllResults)
+        btnNext.addEventListener("click", (e) => {
+            e.preventDefault;
+            idPage = idPageNext
+            location.href = `./characterAll.html?page=${idPage}`
+        })
+
+        btnPrevious.addEventListener("click", (e) => {
+            e.preventDefault;
+            idPage = idPagePrev
+            location.href = `./characterAll.html?page=${idPage}`
+        })
 
     } catch (error) {
         console.error(error)
     }
 }
 displayCharacters()
+
+
+
+
