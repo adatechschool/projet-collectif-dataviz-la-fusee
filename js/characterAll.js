@@ -12,12 +12,17 @@ async function displayCharacters() {
             const newDiv = document.createElement("div");
             const newImg = document.createElement("img");
 
-            newImg.setAttribute("src",)
-            newDiv.append
+            newImg.setAttribute("src", `https://rickandmortyapi.com/api/character/avatar/${data.id}.jpeg`);
+            newImg.setAttribute("id", "test");
+
+            newDiv.append(newImg);
             newDiv.append(data.name);
             charContainer.append(newDiv)
 
-            console.log(data.name)
+            newImg.addEventListener("click", () => {
+                location.href = `./characterOne.html?id=${data.id}`
+            })
+
         })
 
         console.log(characterAllResults)
@@ -27,4 +32,3 @@ async function displayCharacters() {
     }
 }
 displayCharacters()
-
