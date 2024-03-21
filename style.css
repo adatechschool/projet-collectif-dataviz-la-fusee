@@ -41,7 +41,7 @@ main {
 }
 
 .episode {
-   margin-left: 1vw;
+   margin: auto 2vw;
 }
 
 .episode h1 {
@@ -61,15 +61,41 @@ main {
 
 .episode_characters ul {
    padding: 0;
-   margin-right: 3vw;
+   margin: 0;
    list-style: none;
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
-   row-gap: 10px;
+   gap: 3vw;
+   justify-content: center;
 }
 
 .episode_characters li {
-   width: 150px;
-   border: solid black 2px;
+   width: 180px;
+   height: 70px;
+   border-radius: 50%;
+   background-color: #42b4caff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.episode_characters p {
+   margin: 0 5px;
+   width: 100%;
+   text-wrap: balance;
+   text-align: center;
+   font-size: 1.1em;
+}
+
+.episode_characters a {
+   border-radius: 50%;
+   border: solid #42b4caff 2px;
+   color: black;
+   text-decoration: none;
+}
+
+.episode_characters a:hover {
+   border-color: black;
+   box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+   font-weight: bold;
 }

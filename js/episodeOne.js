@@ -40,10 +40,16 @@ async function displayEpisode() {
       console.log(allCharacters);
 
       allCharacters.forEach((character) => {
-         let li = document.createElement("li");
-         li.textContent = character.name;
+         let charLink = document.createElement("a")
+         let charLi = document.createElement("li");
+         let charName = document.createElement("p");
+         charName.textContent = character.name;
+         charLink.href = `/characterOne.html?id=${character.id}`;
 
-         document.querySelector(".character_list").append(li);
+         charLi.append(charName);
+         charLink.append(charLi);
+
+         document.querySelector(".character_list").append(charLink);
       });
    } catch {}
 }
