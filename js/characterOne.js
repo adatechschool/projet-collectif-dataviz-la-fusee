@@ -20,8 +20,9 @@ console.log(id);
 fetch(`https://rickandmortyapi.com/api/character/${id}`)
             .then(response => response.json()) // Transforme la réponse en JSON
             .then(data => {
-              let characterPicture = document.querySelector(".character_image");
-              characterPicture.textContent = data.image;
+              const image = document.createElement("img");
+              image.src = data.image;
+              document.body.append(image);
               let characterName = document.querySelector(".character_name");
               characterName.textContent = data.name;
               let characterStatus = document.querySelector(".character_status");
@@ -34,5 +35,4 @@ fetch(`https://rickandmortyapi.com/api/character/${id}`)
               characterOriginName.textContent = data.origin.name;
               let characterLocationName = document.querySelector(".character_location_name");
               characterLocationName.textContent = data.location.name;
-
             })
