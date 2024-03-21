@@ -19,5 +19,8 @@ console.log(id);
 
 fetch(`https://rickandmortyapi.com/api/character/${id}`)
             .then(response => response.json()) // Transforme la réponse en JSON
-            .then(data => console.log(data))
+            .then(data => {
+              let characterName = document.querySelector(".character_name");
+              characterName.textContent = data.name;
+            })
         
