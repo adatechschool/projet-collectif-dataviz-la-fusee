@@ -26,13 +26,15 @@
          <div class="episode">
             <h1 class="episode_title"></h1>
             <div class="episode_subtitle">
-               <p class="episode_code">Season - Episode </p>
-               <p class="episode_aired">First aired on : </p>
+               <p class="episode_code">Season - Episode</p>
+               <p class="episode_aired">First aired : </p>
             </div>
             <div class="episode_characters">
-                <h2>Character appearances:</h2>
-                <ul class="character_list">
-                </ul>
+               <button id="btn_collapse-char" class="collapsible_characters">
+                  <p>Characters</p>
+                  <p id="collapse_icon">+</p>
+               </button>
+               <ul class="ep_char_list hidden_content"></ul>
             </div>
          </div>
       </main>

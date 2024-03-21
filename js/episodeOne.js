@@ -30,17 +30,13 @@ async function displayEpisode() {
          (charUrl) => charUrl.match(/\d+$/)[0]
       );
 
-      console.log(`https://rickandmortyapi.com/api/character/${idArray}`);
-
       const allCharactersData = await fetch(
          `https://rickandmortyapi.com/api/character/${idArray}`
-      )
+      );
       const allCharacters = await allCharactersData.json();
 
-      console.log(allCharacters);
-
       allCharacters.forEach((character) => {
-         let charLink = document.createElement("a")
+         let charLink = document.createElement("a");
          let charLi = document.createElement("li");
          let charName = document.createElement("p");
          charName.textContent = character.name;
@@ -49,9 +45,21 @@ async function displayEpisode() {
          charLi.append(charName);
          charLink.append(charLi);
 
-         document.querySelector(".character_list").append(charLink);
+         document.querySelector(".ep_char_list").append(charLink);
       });
    } catch {}
 }
+
+/*********************************************************************************************/
+
+//Button to display list of characters
+document.getElementById("btn_collapse-char").addEventListener("click", () => {
+   const content = document.querySelector(".ep_char_list");
+   content.classList.toggle("hidden_content");
+   content.classList.toggle("active_content");
+   const icon = document.getElementById("collapse_icon");
+   if (icon.textContent === "+") icon.textContent = "-";
+   else if (icon.textContent === "-") icon.textContent = "+";
+});
 
 displayEpisode();
