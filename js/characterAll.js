@@ -78,6 +78,7 @@ async function displayCharacters() {
 
                 idPage = inputGoToPage.value
                 location.href = `./characterAll.html?page=${idPage}`
+
             })
 
         }// == Fin gestion pages Next/Prev et Go-To-Page
