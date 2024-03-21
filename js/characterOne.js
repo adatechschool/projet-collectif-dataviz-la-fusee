@@ -22,5 +22,10 @@ fetch(`https://rickandmortyapi.com/api/character/${id}`)
             .then(data => {
               let characterName = document.querySelector(".character_name");
               characterName.textContent = data.name;
+              let characterStatus = document.querySelector(".character_status");
+              characterStatus.textContent = data.status;
+              let characterSpecies = document.querySelector(".character_species");
+              characterSpecies.textContent = data.species;
+              let characterGender = document.querySelector(".character_gender");
+              characterGender.textContent = data.gender;
             })
-        
