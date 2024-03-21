@@ -7,34 +7,20 @@ const btnNext = document.querySelector("#btnNext");
 async function displayCharacters() {
     try {
 
-        let idPage;
-
         const params = new URLSearchParams(window.location.search)
-        idPage = params.get("page")
+        let idPage = params.get("page")
 
         let characterAll = await fetch(`https://rickandmortyapi.com/api/character?page=${idPage}`);
         const characterAllJson = await characterAll.json();
         const characterAllResults = await characterAllJson.results;
         const characterAllInfo = await characterAllJson.info;
 
-        // ==== IDs des pages
-        let regex = /[1-9]/
+        // ==== URLs des pages Next et Prev
         const URLPageNext = characterAllInfo.next
-        let idPageNext = null
-        if (URLPageNext) {
-            idPageNext = URLPageNext.split("").filter((el) => regex.test(el)).join("")
-        }
-
         const URLPagePrev = characterAllInfo.prev
-        let idPagePrev = null;
-        if (URLPagePrev) {
-            idPagePrev = URLPagePrev.split("").filter((el) => regex.test(el)).join("")
-        }
-        console.log(idPagePrev)
-        console.log(idPageNext)
-        console.log(characterAllResults)
-        console.log(characterAllInfo)
+        // == Fin URLs
 
+        // ==== Creation dynamique de la page
         characterAllResults.forEach((data) => {
 
             const newDiv = document.createElement("div");
@@ -51,18 +37,33 @@ async function displayCharacters() {
             })
 
         })
+        // == Fin page dynamique
 
+        // ==== Gestion des pages Next et Prev sur event sur bouttons
+        // = Next
         btnNext.addEventListener("click", (e) => {
             e.preventDefault;
-            idPage = idPageNext
+
+            if (URLPageNext) {
+                let params = new URL(URLPageNext).searchParams;
+                idPage = params.get("page");
+            } else idPage = "1"
+
             location.href = `./characterAll.html?page=${idPage}`
         })
 
+        // = Prev
         btnPrevious.addEventListener("click", (e) => {
             e.preventDefault;
-            idPage = idPagePrev
+
+            if (URLPagePrev) {
+                let params = new URL(URLPagePrev).searchParams;
+                idPage = params.get("page");
+            } else idPage = "42"
+
             location.href = `./characterAll.html?page=${idPage}`
         })
+        // == Fin gestion pages Next & Prev
 
     } catch (error) {
         console.error(error)
