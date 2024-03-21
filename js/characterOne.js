@@ -30,4 +30,9 @@ fetch(`https://rickandmortyapi.com/api/character/${id}`)
               characterSpecies.textContent = data.species;
               let characterGender = document.querySelector(".character_gender");
               characterGender.textContent = data.gender;
+              let characterOriginName = document.querySelector(".character_origin_name");
+              characterOriginName.textContent = data.origin.name;
+              let characterLocationName = document.querySelector(".character_location_name");
+              characterLocationName.textContent = data.location.name;
+
             })
