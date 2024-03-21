@@ -3,6 +3,7 @@
 const charContainer = document.querySelector("#charContainer");
 const btnPrevious = document.querySelector("#btnPrevious");
 const btnNext = document.querySelector("#btnNext");
+const subNavBar = document.querySelector("#subNavBar");
 const inputGoToPage = document.querySelector("#inputGoToPage");
 inputGoToPage.setAttribute("autocomplete", "off")
 
@@ -28,13 +29,15 @@ async function displayCharacters() {
         characterAllResults.forEach((data) => {
 
             const newDiv = document.createElement("div");
+            const newDiv2 = document.createElement("div");
             const newImg = document.createElement("img");
 
             newImg.setAttribute("src", `https://rickandmortyapi.com/api/character/avatar/${data.id}.jpeg`);
 
             newDiv.append(newImg);
-            newDiv.append(data.name);
-            charContainer.append(newDiv)
+            charContainer.append(newDiv);
+            newDiv2.append(data.name);
+            charContainer.append(newDiv2);
 
             newImg.addEventListener("click", () => {
                 location.href = `./characterOne.html?id=${data.id}`
@@ -69,6 +72,7 @@ async function displayCharacters() {
                 location.href = `./characterAll.html?page=${idPage}`
             })
 
+            inputGoToPage.value = idPage
             inputGoToPage.addEventListener("change", (e) => {
                 e.preventDefault();
 
