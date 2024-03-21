@@ -3,12 +3,16 @@
 const charContainer = document.querySelector("#charContainer");
 const btnPrevious = document.querySelector("#btnPrevious");
 const btnNext = document.querySelector("#btnNext");
+const inputGoToPage = document.querySelector("#inputGoToPage");
+inputGoToPage.setAttribute("autocomplete", "off")
 
 async function displayCharacters() {
     try {
 
         const params = new URLSearchParams(window.location.search)
         let idPage = params.get("page")
+        // ==== Limitation de la page max
+        if (parseInt(idPage) > 42) idPage = "42"
 
         let characterAll = await fetch(`https://rickandmortyapi.com/api/character?page=${idPage}`);
         const characterAllJson = await characterAll.json();
@@ -39,31 +43,42 @@ async function displayCharacters() {
         })
         // == Fin page dynamique
 
-        // ==== Gestion des pages Next et Prev sur event sur bouttons
-        // = Next
-        btnNext.addEventListener("click", (e) => {
-            e.preventDefault;
+        // ==== Gestion des pages Next/Prev et Go-To-Page
+        {
+            // = Next
+            btnNext.addEventListener("click", (e) => {
+                e.preventDefault();
 
-            if (URLPageNext) {
-                let params = new URL(URLPageNext).searchParams;
-                idPage = params.get("page");
-            } else idPage = "1"
+                if (URLPageNext) {
+                    let params = new URL(URLPageNext).searchParams;
+                    idPage = params.get("page");
+                } else idPage = "1"
 
-            location.href = `./characterAll.html?page=${idPage}`
-        })
+                location.href = `./characterAll.html?page=${idPage}`
+            })
 
-        // = Prev
-        btnPrevious.addEventListener("click", (e) => {
-            e.preventDefault;
+            // = Prev
+            btnPrevious.addEventListener("click", (e) => {
+                e.preventDefault();
 
-            if (URLPagePrev) {
-                let params = new URL(URLPagePrev).searchParams;
-                idPage = params.get("page");
-            } else idPage = "42"
+                if (URLPagePrev) {
+                    let params = new URL(URLPagePrev).searchParams;
+                    idPage = params.get("page");
+                } else idPage = "42"
 
-            location.href = `./characterAll.html?page=${idPage}`
-        })
-        // == Fin gestion pages Next & Prev
+                location.href = `./characterAll.html?page=${idPage}`
+            })
+
+            inputGoToPage.addEventListener("change", (e) => {
+                e.preventDefault();
+
+                idPage = inputGoToPage.value
+                location.href = `./characterAll.html?page=${idPage}`
+            })
+
+        }// == Fin gestion pages Next/Prev et Go-To-Page
+
+
 
     } catch (error) {
         console.error(error)
