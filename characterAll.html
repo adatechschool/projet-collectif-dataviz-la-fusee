@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>La Fusée - Personnages</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Fusée - Personnages</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header>
-        <img src="./images/logotitle.png" width="200" alt="Titre de Rick and Morty">
-        <nav id="nav">
+   <body>
+      <header>
+         <img
+            src="./images/logotitle.png"
+            width="200"
+            alt="Titre de Rick and Morty"
+         />
+         <nav id="nav">
             <a class="nav-link" href="./index.html">Home</a>
             <a class="nav-link" href="./characterAll.html"> Characters </a>
             <a class="nav-link" href="./locations.html"> Localisation </a>
             <a class="nav-link" href="./episodeAll.html"> Episodes </a>
-        </nav>
-    </header>
-    <main>
-
-        <div id="subNavBar">
+         </nav>
+      </header>
+      <main>
+         <div id="subNavBar">
             <div>
-                <button id="btnPrevious">Previous</button>
+               <button id="btnPrevious">Previous</button>
             </div>
 
             <div>
-                <input type="type" id="inputGoToPage" placeholder="Go to page...">
+               <input
+                  type="type"
+                  id="inputGoToPage"
+                  placeholder="Go to page..."
+               />
             </div>
 
             <div>
-                <button id="btnNext">Next</button>
+               <button id="btnNext">Next</button>
             </div>
-        </div>
 
-        <div id="charContainer"></div>
+            <form id="filter_bar">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="genderless">Genderless</option>
+                    <option value="unknown">Unknown</option>
+                </select>
 
-    </main>
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="Alive">Alive</option>
+                    <option value="Dead">Dead</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </form>
+         </div>
 
-    <script src="./js/characterAll.js"></script>
-</body>
+         <div id="charContainer"></div>
+      </main>
 
+      <script src="./js/characterAll.js"></script>
+   </body>
 </html>

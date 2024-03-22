@@ -11,11 +11,19 @@ async function displayCharacters() {
     try {
 
         const params = new URLSearchParams(window.location.search)
-        let idPage = params.get("page")
+        let idPage = params.get("page");
+        let genderFilter = params.get("gender") ? `&gender=${params.get("gender")}` : "";
+        let statusFilter = params.get("status") ? `&status=${params.get("status")}` : "";
+        
+        console.log(idPage)
         // ==== Limitation de la page max
-        if (parseInt(idPage) > 42) idPage = "42"
+        if (parseInt(idPage) > 42) idPage = "42";
 
-        let characterAll = await fetch(`https://rickandmortyapi.com/api/character?page=${idPage}`);
+        console.log(
+           `https://rickandmortyapi.com/api/character?page=${idPage}${genderFilter}${statusFilter}`
+        );
+
+        let characterAll = await fetch(`https://rickandmortyapi.com/api/character?page=${idPage}${genderFilter}${statusFilter}`);
         const characterAllJson = await characterAll.json();
         const characterAllResults = await characterAllJson.results;
         const characterAllInfo = await characterAllJson.info;
