@@ -86,23 +86,22 @@ header {
   padding: 10px;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   .navContainer {
     flex-direction: column;
   }
 
   .sidebar {
-    width: 100%; /* Sidebar takes full width */
-    /* flex: none;  Reset flex */
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-  }
-
-  .sidebar {
     width: 100%; /* Full width */
+    height: auto;
     display: flex;
     flex-direction: row; /* Align items horizontally */
     overflow-x: auto; /* Enables horizontal scrolling */
+  }
+
+  .nav-item {
+    flex: 1; /* Distributes space evenly among items */
+    border-bottom: none; /* Removes the border */
+    text-align: center; /* Optional: centers text */
   }
 }

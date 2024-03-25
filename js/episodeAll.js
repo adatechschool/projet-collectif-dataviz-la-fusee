@@ -57,14 +57,8 @@ const allEpisodes = async function () {
     console.log(episodesPerSeason);
     divideEpiSeason(allEpisodesData);
     episodesPerSeason.forEach((_, i) => {
-      htmlTableSeasons += `
-        <tr>
-            <td class="nav__item">
-                
-                    <a class="nav__link" href="#section--${i + 1}">${i + 1}</a>
-                
-            </td>
-        </tr>
+      htmlTableSeasons += `               
+      <a class="nav__item nav__link" href="#section--${i + 1}">${i + 1}</a>
         `;
     });
     allEpisodesArray.forEach((episode, i) => {
