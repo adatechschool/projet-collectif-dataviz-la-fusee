@@ -8,7 +8,7 @@ const getSeason = function (episode) {
   return seasonNum;
 };
 // getSeason("S01E05");
-const divideEpiSeason = function (data) {};
+const divideEpiSeason = function (data) { };
 
 // document.querySelector(".nav__links").addEventListener("click", function (e) {
 //   e.preventDefault();
@@ -93,6 +93,11 @@ const allEpisodes = async function () {
 
     navSeasonContainer.insertAdjacentHTML("beforeend", htmlTableSeasons);
     navEpisodeContainer.insertAdjacentHTML("beforeend", htmlTableEpisodes);
+
+    let apparitionRate = {}
+    allEpisodesArray.forEach((episode) => {
+      let charInEpisode = episode.characters
+    })
   } catch (error) {
     console.error("Found an error", error);
   }
