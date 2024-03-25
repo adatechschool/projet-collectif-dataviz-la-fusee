@@ -4,7 +4,7 @@ const episodeId = params.get("id");
 async function displayEpisode() {
     try {
         const episodeData = await fetch(
-            "https://rickandmortyapi.com/api/episode/" + episodeId
+            `https://rickandmortyapi.com/api/episode/${episodeId}`
         );
         const episode = await episodeData.json();
 
