@@ -87,5 +87,6 @@ async function displayCharacters() {
     } catch (error) {
         console.error(error);
     }
+
 }
 displayCharacters();
