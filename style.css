@@ -31,6 +31,10 @@ header {
    text-decoration: none;
 }
 
+main {
+   display: flex;
+   flex-direction: column;
+}
 
 /******************************* Page One Episode ******************************************/
 #episode_title {
@@ -127,4 +131,66 @@ header {
    border-color: black;
    box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
    font-weight: bold;
+}
+
+/* *********************** Page All Characters *******************/
+
+#charContainer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-content: center;
+   /* gap: 1vw; */
+   column-gap: 1vw;
+   row-gap: 2.5vh;
+}
+
+.charContainers {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   max-width: 235px;
+   /* height: 235px; */
+   max-height: 235px;
+   box-sizing: border-box;
+   border: 2px solid #42b4caff;
+   border-radius: 50px;
+   box-shadow: 2px 2px 5px #bfde42ff;
+   transition: all ease-in-out 125ms;
+}
+
+.charContainers:hover {
+   box-shadow: 4px 4px 10px #bfde42ff;
+   /* color: #42b4caff; */
+   font-size: large;
+   text-shadow: 1px 1px 5px #bfde42ff;
+   cursor: pointer;
+}
+
+.charContainers img {
+   width: 85%;
+   padding: 1vh 1vw 0.5vh 1vw;
+   border-radius: 50px;
+}
+
+.charContainers div {
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   height: 3vh;
+}
+
+#subNavBar {
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   justify-content: center;
+   gap: 2%;
+   padding: 1%;
+}
+
+#subNavBar input {
+   text-align: center;
+   width: 25px;
 }
