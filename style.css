@@ -1,132 +1,133 @@
 html,
 body {
-   margin: 0 auto;
-   width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  scroll-padding-top: 85px;
 }
 
 header {
-   position: sticky;
-   margin: 0;
-   padding: 10px 5px;
-   top: 0;
-   background-color: #42b4caff;
-   display: flex;
-   justify-content: space-between;
-   box-shadow: 0 5px 5px #bfde42ff;
+  position: sticky;
+  margin: 0;
+  padding: 10px 5px;
+  top: 0;
+  background-color: #42b4caff;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 5px #bfde42ff;
 }
 
 #nav {
-   margin-right: 2vw;
-   display: flex;
-   gap: 15px;
-   align-items: center;
-   font-size: large;
+  margin-right: 2vw;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: large;
 }
 
 #nav a {
-   color: black;
-   text-shadow: #bfde42ff 1px 0 10px;
-   font-style: normal;
-   text-decoration: none;
+  color: black;
+  text-shadow: #bfde42ff 1px 0 10px;
+  font-style: normal;
+  text-decoration: none;
 }
 
 main {
-   display: flex;
+  display: flex;
 }
 
 /******************************* Page One Episode ******************************************/
 #episode_title {
-   margin-left: 2vw;
+  margin-left: 2vw;
 }
 
 .episode {
-   margin: auto 2vw;
-   width: 100%;
+  margin: auto 2vw;
+  width: 100%;
 }
 
 .episode h1 {
-   margin-bottom: 5px;
-   color: black;
-   text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+  margin-bottom: 5px;
+  color: black;
+  text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
 }
 
 .episode_subtitle {
-   margin-top: 0;
-   font-size: 1.3em;
+  margin-top: 0;
+  font-size: 1.3em;
 }
 
 .episode_code,
 .episode_aired {
-   margin: 10px 5px;
+  margin: 10px 5px;
 }
 
 .episode_characters {
-   width: 100%;
+  width: 100%;
 }
 
 .collapsible_characters {
-   width: 100%;
-   margin: 20px 0;
-   font-size: 1.3em;
-   font-weight: bold;
-   background-color: #42b4caff;
-   border: none;
-   border-radius: 15px;
-   display: flex;
-   justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  background-color: #42b4caff;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .collapsible_characters:hover {
-   box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+  box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
 }
 
 .collapsible_characters p {
-   margin: 10px;
+  margin: 10px;
 }
 
 .hidden_content {
-   display: none;
+  display: none;
 }
 
 .active_content {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 3vw;
-   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: center;
 }
 
 .ep_char_list {
-   padding: 0;
-   margin: 0;
-   list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .ep_char_list li {
-   width: 180px;
-   height: 70px;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  width: 180px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ep_char_list p {
-   margin: 0 5px;
-   width: 100%;
-   text-wrap: balance;
-   text-align: center;
-   font-size: 1.1em;
+  margin: 0 5px;
+  width: 100%;
+  text-wrap: balance;
+  text-align: center;
+  font-size: 1.1em;
 }
 
 .ep_char_list a {
-   border-radius: 50%;
-   border: solid #42b4caff 2px;
-   color: black;
-   text-decoration: none;
+  border-radius: 50%;
+  border: solid #42b4caff 2px;
+  color: black;
+  text-decoration: none;
 }
 
 .ep_char_list a:hover {
-   border-color: black;
-   box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
-   font-weight: bold;
+  border-color: black;
+  box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+  font-weight: bold;
 }
