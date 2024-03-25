@@ -130,7 +130,9 @@ async function displayCharacters() {
                 e.preventDefault();
 
                 idPage = inputGoToPage.value;
-                location.href = `./characterAll.html?page=${idPage}`;
+                if (idPage > pageMax) idPage = pageMax;
+                if (idPage < 1) idPage = 1;
+                location.href = `./characterAll.html?page=${idPage}${genderFilter}${statusFilter}${speciesFilter}`;
             });
         } // == Fin gestion pages Next/Prev et Go-To-Page
     } catch (error) {
@@ -145,5 +147,5 @@ displayCharacters();
 const filterBtn = document.getElementById("filter-btn");
 filterBtn.addEventListener("click", () => {
     const urlParams = getFilterParams();
-    location.href = `/characterAll.html?${urlParams}`;
+    location.href = `./characterAll.html?${urlParams}`;
 });
