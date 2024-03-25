@@ -10,6 +10,18 @@ const getSeason = function (episode) {
 // getSeason("S01E05");
 const divideEpiSeason = function (data) {};
 
+// document.querySelector(".nav__links").addEventListener("click", function (e) {
+//   e.preventDefault();
+
+//   // Matching strategy
+//   if (e.target.classList.contains("nav__link")) {
+//     // console.log(e.target.getAttribute("href"));
+//     const id = e.target.getAttribute("href");
+//     // console.log(document.querySelector(id));
+//     document.querySelector(id).scrollIntoView({ behaviour: "smooth" });
+//   }
+// });
+
 const allEpisodes = async function () {
   try {
     let allEpisodesArray = [];
@@ -47,7 +59,11 @@ const allEpisodes = async function () {
     episodesPerSeason.forEach((_, i) => {
       htmlTableSeasons += `
         <tr>
-            <td>${i + 1}</td>
+            <td class="nav__item">
+                
+                    <a class="nav__link" href="#section--${i + 1}">${i + 1}</a>
+                
+            </td>
         </tr>
         `;
     });
@@ -58,11 +74,17 @@ const allEpisodes = async function () {
         <td># ${i + 1}</td>
         <td>${episode.name}</td>
     </tr>
+    
         `;
       } else {
         htmlTableEpisodes += `
+        <section class="section" id="section--${getSeason(episode.episode)}">
         <tr>
             <td>Season ${getSeason(episode.episode)}</td>
+        </tr>
+        <tr>
+            <td># ${i + 1}</td>
+            <td>${episode.name}</td>
         </tr>
             `;
         currentSeason = getSeason(episode.episode);
