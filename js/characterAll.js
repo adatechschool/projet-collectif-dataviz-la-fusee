@@ -34,10 +34,11 @@ async function displayCharacters() {
 
             newImg.setAttribute("src", `https://rickandmortyapi.com/api/character/avatar/${data.id}.jpeg`);
 
+            newDiv.classList.add("charContainers")
             newDiv.append(newImg);
             charContainer.append(newDiv);
             newDiv2.append(data.name);
-            charContainer.append(newDiv2);
+            newImg.after(newDiv2);
 
             newImg.addEventListener("click", () => {
                 location.href = `./characterOne.html?id=${data.id}`
