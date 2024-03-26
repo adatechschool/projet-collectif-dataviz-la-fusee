@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>La Fusée - Solo Personnage</title>
-      <link rel="stylesheet" href="style.css" />
-      <link rel="stylesheet" href="characterOne.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-   </head>
-   <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Fusée - Solo Personnage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="characterOne.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <img src="./images/logotitle.png" width="200" alt="Titre de Rick and Morty">
-        <nav id="nav">
-            <a class="nav-link" href="./index.html">Home</a>
-            <a class="nav-link" href="./characterAll.html"> Characters </a>
-            <a class="nav-link" href="./locations.html"> Localisation </a>
-            <a class="nav-link" href="./episodeAll.html"> Episodes </a>
-        </nav>
+      <img
+        src="./images/logotitle.png"
+        width="200"
+        alt="Titre de Rick and Morty"
+      />
+      <nav id="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./characterAll.html"> Characters </a>
+        <a class="nav-link" href="./locations.html"> Localisation </a>
+        <a class="nav-link" href="./episodeAll.html"> Episodes </a>
+      </nav>
     </header>
 
-      <main>
-        <div class="imagedefond">
+    <main>
+      <div class="imagedefond">
+
+        <div class="global">
         <div class="centrage" id="card">
           <div id="card-title">
             <h1>I.D. CARD</h1>
           </div>
-                    <div id="card-id">
+
+          <div id="card-id">
             <div id="card-number">
-              <p class="cardtitle">Série  :</p>
-              <p>Rick & Morty      </p>
+              <p class="cardtitle">Série :</p>
+              <p>Rick & Morty</p>
             </div>
-              <p class="cardtitle">Projet collectif numéro 2</p>
+            <p class="cardtitle">Projet collectif numéro 2</p>
           </div>
+
           <div id="card-information">
             <div id="card-photo"></div>
-            <div id="card-text">
-            <div id="card-name">
-              <div class="card-box"></div>
-              <p><strong> Nom :</p> </strong>
-              <p class="character_name"></p>
 
-              <div class="card-box"></div>
-              <p class="cardtitle"><strong></strong>Status :</p></strong>
-              <p class="character_status"></p>
-            </div>
+            <div id="card-text">
+              <div id="card-name">
+                <div class="card-box"></div>
+                <p>Nom :</p>
+                <p class="character_name"></p>
+
+                <div class="card-box"></div>
+                <p class="cardtitle">Status :</p>
+                <p class="character_status"></p>
+              </div>
               <div class="card-box">
                 <p class="cardtitle">Sexe :</p>
-                <p class="character_gender"></p> 
+                <p class="character_gender"></p>
               </div>
-              <br>
+              <br />
               <div class="card-box">
                 <p class="cardtitle">Species :</p>
                 <p class="character_species"></p>
@@ -64,18 +79,25 @@
               </div>
 
               <div class="card-box">
-              <p class="cardtitle">Signature :</p><br />
-              <p class="character_sign"></p>
-              </div>  
-
+                <p class="cardtitle">Signature :</p>
+                <br />
+                <p class="character_sign"></p>
+              </div>
             </div>
-            
-          
           </div>
- 
         </div>
+        
+        <div>
+          <button class="btn-rnd" id="btn-rnd-char">
+            Next Random Character
+          </button>
+        </div>
+
       </div>
-      <script src="js/characterOne.js"></script>  
-        </main>
-   </body>
+
+      </div>
+    </main>
+
+    <script src="js/characterOne.js"></script>
+  </body>
 </html>

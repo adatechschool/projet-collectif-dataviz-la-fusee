@@ -28,9 +28,8 @@ p {
   border-radius: 10px;
   box-shadow: 2px 2px 5px #bfde42ff;
   background-color: #42B4CA;
-  margin: 500px;
-  height: 390px;
-  width: 500px;
+  margin: 5%;
+  max-width: 500px;
   margin-top: 10%;
 }
 
@@ -84,7 +83,7 @@ p {
 }
 
 .card-box {
-  margin-right: 0px;
+  margin-right: 0;
   justify-content: space-between;
 }
 
@@ -115,6 +114,16 @@ p {
 }
 
 .imagedefond { 
-  background-image: url("https://w.forfun.com/fetch/03/03fdb791c0c8753db54348da091ba79b.jpeg");
+  background-image: url("./images/background-characterone.jpeg");
   background-size: cover;
+  height: 100%;
+ }
+
+ /* .btn-rnd {
+margin-left: 20%;
+ } */
+
+ .global{
+  max-width: 500px;
+  text-align: center;
  }
