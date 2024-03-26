@@ -301,6 +301,134 @@ main {
     width: 25px;
 }
 
+/* Episode ALL style */
+
+.navContainer {
+  display: flex;
+  min-height: 5vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column; /* Sidebar items vertically */
+  position: fixed;
+  width: 70px; /* Fixed sidebar width */
+  height: 60vh;
+
+  padding-top: 10px;
+  justify-content: stretch;
+}
+
+.sidebar a {
+  flex-grow: 1;
+  display: block;
+  align-items: center; /* Centers the link text vertically */
+  justify-content: center; /* Centers the link text horizontally */
+  padding: 5px;
+  /* margin-bottom: 10px; */
+  background-color: #42b3ca8e;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 5px 0 0 #bfde428f;
+}
+
+.sidebar a:hover {
+  background-color: #bfde428f;
+  box-shadow: 5px 0 0 #42b3ca8e;
+}
+
+.content-area {
+  flex-grow: 1; /* Takes up the remaining space */
+  padding: 20px;
+  padding-left: 72px;
+}
+
+.page-title {
+  padding: 20px;
+}
+
+.season-container {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px; /* Space between seasons */
+}
+.season {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255);
+  text-shadow: rgba(66, 179, 202);
+  text-align: center;
+}
+h2.season {
+  font-size: 50px;
+}
+.episodes-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between episodes */
+  width: 80vw;
+}
+
+.episodeUniAll {
+  /* flex: 1 1 100px; Flex basis of 200px with ability to grow and shrink */
+  padding: 10px;
+  /* background-color: rgba(255, 255, 255, 0.8); Semi-transparent background */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); Subtle shadow for depth */
+  border: 2px solid rgba(66, 179, 202, 0.555);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(191, 222, 66, 0.562);
+}
+
+/* .backgroundImg0 {
+   position: relative;
+ }
+ 
+ .backgroundImg0:after {
+   content: "";
+   background: url("images/season0.png") no-repeat center center;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   opacity: 0.2;  Here is your opacity 
+ } 
+ */
+
+.episode-number,
+.episode-name {
+  margin: 5px 0;
+}
+
+/* -------------------------------- */
+@media (max-width: 800px) {
+  .navContainer {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%; /* Full width */
+    height: 50px;
+    display: flex;
+
+    flex-direction: row; /* Align items horizontally */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    justify-content: stretch;
+    /* color: rgba(191, 222, 66, 0.562); */
+  }
+
+  .nav__item {
+    flex: 1; /*Distributes space evenly among items */
+    border-bottom: none; /* Removes the border */
+    text-align: center; /* Optional: centers text */
+  }
+}
+
 /********************** Page locations **************************************/
 .location-header {
     margin: 20px 2vw;
