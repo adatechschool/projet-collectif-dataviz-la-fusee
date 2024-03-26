@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>La Fusée - Toutes les locations</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Fusée - Toutes les locations</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <header>
+            <img
+                src="./images/logotitle.png"
+                width="200"
+                alt="Titre de Rick and Morty"
+            />
+            <nav id="nav">
+                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link" href="./characterAll.html"> Characters </a>
+                <a class="nav-link" href="./locations.html"> Locations </a>
+                <a class="nav-link" href="./episodeAll.html"> Episodes </a>
+            </nav>
+        </header>
 
-<body>
-    <header>
-        <img src="./images/logotitle.png" width="200" alt="Titre de Rick and Morty">
-        <nav id="nav">
-            <a class="nav-link" href="./index.html">Home</a>
-            <a class="nav-link" href="./characterAll.html"> Characters </a>
-            <a class="nav-link" href="./locations.html"> Localisation </a>
-            <a class="nav-link" href="./episodeAll.html"> Episodes </a>
-        </nav>
-    </header>
+        <main>
+            <h1 class="location-header">Locations</h1>
+            <div id="pagination-locations">
+                <button id="btnPreviousLocations">Previous</button>
+                <button id="btnNextLocations">Next</button>
+            </div>
 
-    <script src="js/episodeAll.js"></script>
-</body>
+            <ul id="locations-list"></ul>
+        </main>
 
+        <script src="js/locations.js"></script>
+    </body>
 </html>
