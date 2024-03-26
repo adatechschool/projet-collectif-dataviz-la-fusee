@@ -30,6 +30,12 @@ fetch(`https://rickandmortyapi.com/api/character/${id}`)
               
             let characterSign = document.querySelector(".character_sign");
               characterSign.textContent = data.name;
+
+              const btnRandomCharacter = document.getElementById("btn-rnd-char");
+const randomCharacterId = Math.floor(Math.random() * 826) + 1;
+btnRandomCharacter.addEventListener("click", () => {
+   location.href = `./characterOne.html?id=${randomCharacterId}`
+})
            
 // ==== Stat apparition rate
         let characterRate = Math.round((data.episode.length / 51) * 100)
