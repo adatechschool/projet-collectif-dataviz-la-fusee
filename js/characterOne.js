@@ -33,8 +33,14 @@ fetch(`https://rickandmortyapi.com/api/character/${id}`)
         characterGender.textContent = data.gender;
         let characterOriginName = document.querySelector(".character_origin_name");
         characterOriginName.textContent = data.origin.name;
-        let characterLocationName = document.querySelector(".character_location_name");
-        characterLocationName.textContent = data.location.name;
-        let characterSign = document.querySelector(".character_sign");
-        characterSign.textContent = data.name;
+        // let characterLocationName = document.querySelector(".character_location_name");
+        // characterLocationName.textContent = data.location.name;
+        // let characterSign = document.querySelector(".character_sign");
+        // characterSign.textContent = data.name;
+
+        // ==== Stat apparition rate
+        let characterRate = Math.round((data.episode.length / 51) * 100)
+        console.log(characterRate)
+        const characterRateSelect = document.querySelector("#characterRate");
+        characterRateSelect.append(`${characterRate}%`);
     })
