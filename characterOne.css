@@ -45,6 +45,7 @@ p {
 #card-id {
   padding: 5px;
   display: flex;
+  justify-content: space-between;
 }
 
 #card-number{
@@ -55,6 +56,7 @@ p {
 #card-information {
   display: flex;
   padding: 5px;
+  justify-content: space-between;
 }
 
 #card-photo {
@@ -79,7 +81,8 @@ p {
 }
 
 .card-box {
-  margin-right: 20px;
+  margin-right: 0px;
+  justify-content: space-between;
 }
 
 .cardsign {
@@ -100,3 +103,6 @@ p {
 #card-text{
   text-align: right;
 }
+
+
+
