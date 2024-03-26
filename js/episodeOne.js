@@ -40,7 +40,7 @@ async function displayEpisode() {
             let charLi = document.createElement("li");
             let charName = document.createElement("p");
             charName.textContent = character.name;
-            charLink.href = `/characterOne.html?id=${character.id}`;
+            charLink.href = `./characterOne.html?id=${character.id}`;
 
             charLi.append(charName);
             charLink.append(charLi);
