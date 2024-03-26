@@ -6,6 +6,7 @@ body {
 }
 
 header {
+  width: 100%;
   position: sticky;
   margin: 0;
   padding: 10px 5px;
@@ -14,6 +15,8 @@ header {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 5px 5px #bfde42ff;
+  overflow: auto;
+  scrollbar-gutter: stable;
 }
 
 #nav {
@@ -34,6 +37,8 @@ header {
 main {
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  scrollbar-gutter: stable;
 }
 
 /******************************* Page One Episode ******************************************/
@@ -321,4 +326,52 @@ h2.season {
     border-bottom: none; /* Removes the border */
     text-align: center; /* Optional: centers text */
   }
+}
+
+/********************** Page locations **************************************/
+.location-header {
+  margin: 20px 2vw;
+  color: black;
+  text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+}
+
+#locations-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+}
+
+#locations-list li {
+  width: 290px;
+  height: 160px;
+  padding: 20px 15px;
+  border: 2px solid #42b4caff;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px #bfde42ff;
+  box-sizing: border-box;
+  column-gap: 1vw;
+  row-gap: 2.5vh;
+}
+
+#locations-list h2 {
+  display: block;
+  height: 60px;
+  margin: 0;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+}
+
+#locations-list p {
+  margin: 5px;
+}
+
+#pagination-locations {
+  width: 98%;
+  margin: 0 1%;
+  display: flex;
+  justify-content: space-between;
 }

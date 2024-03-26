@@ -87,7 +87,7 @@ const allEpisodes = async function () {
     // });
     navSeasonContainer.innerHTML = htmlSeasonLinks;
     navEpisodeContainer.innerHTML = htmlSeasonContents;
-    const episode = document.querySelectorAll(".episode");
+    const episode = document.querySelectorAll(".episodeUniAll");
     console.log(episode);
     // console.log(episode);
     episode.forEach((ep, i) => {
