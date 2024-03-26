@@ -88,10 +88,6 @@ const allEpisodes = async function () {
     navSeasonContainer.insertAdjacentHTML("beforeend", htmlTableSeasons);
     navEpisodeContainer.insertAdjacentHTML("beforeend", htmlTableEpisodes);
 
-    let apparitionRate = {}
-    allEpisodesArray.forEach((episode) => {
-      let charInEpisode = episode.characters
-    })
   } catch (error) {
     console.error("Found an error", error);
   }
