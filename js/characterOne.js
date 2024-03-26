@@ -1,15 +1,3 @@
-// const query = window.location.search;
-// console.log(query);
-
-// const params = new URLSearchParams(window.location.search);
-// const id = params.get("id");
-// console.log(id);
-
-// fetch(`https://rickandmortyapi.com/api/character/${id}`)
-//     .then (reponse => reponse.json())
-//     .then (reponse2 => {console.log(reponse2)
-//     })
-
 const query = window.location.search;
 console.log(query);
 
@@ -42,4 +30,10 @@ fetch(`https://rickandmortyapi.com/api/character/${id}`)
               
             let characterSign = document.querySelector(".character_sign");
               characterSign.textContent = data.name;
-            })
+           
+// ==== Stat apparition rate
+        let characterRate = Math.round((data.episode.length / 51) * 100)
+        console.log(characterRate)
+        const characterRateSelect = document.querySelector("#characterRate");
+        characterRateSelect.append(`${characterRate}%`);
+})
