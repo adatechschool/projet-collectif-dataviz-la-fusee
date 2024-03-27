@@ -186,7 +186,9 @@ main {
 }
 
 #subNavBar {
+    margin: 20px 0;
    display: flex;
+   flex-wrap: wrap;
    flex-direction: row;
    text-align: center;
    justify-content: center;
@@ -199,6 +201,15 @@ main {
    width: 25px;
 }
 
+#filter_bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+#filter_bar select {
+    max-width: 100px;
+}
 
 /********************** Page locations **************************************/
 .location-header {
@@ -724,4 +735,22 @@ h2.season {
     margin: 0 1%;
     display: flex;
     justify-content: space-between;
+}
+
+
+/**************************************** Buttons pagination ***************************************/
+#btnNext, #btnPrevious, #btnPreviousLocations, #btnNextLocations, #filter-btn {
+    background-color: #42b4caff;
+    border: none;
+    border-radius: 50px;
+    padding: 3px 10px;
+}
+
+:where(#btnNext, #btnPrevious, #btnPreviousLocations, #btnNextLocations, #filter-btn):hover:not(:disabled) {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #bfde42ff;
+}
+
+#btnPreviousLocations:disabled, #btnNextLocations:disabled {
+    background-color: gray;
 }
