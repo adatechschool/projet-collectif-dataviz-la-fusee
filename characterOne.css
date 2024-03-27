@@ -1,6 +1,8 @@
+.main-characterone {
+  height: 100%;
+}
 
-
-h1{
+h1 {
   font-family: 'Arvo', serif;
   font-weight: lighter;
   font-size: 25px;
@@ -46,13 +48,13 @@ p {
 
 #card-id {
   padding: 5px;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
 }
 
-#card-number{
+#card-number {
   display: inherit;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 #card-information {
@@ -79,7 +81,7 @@ p {
 
 #card-detail {
   display: flex;
-  
+
 }
 
 .card-box {
@@ -100,30 +102,32 @@ p {
   border-bottom-right-radius: 8px;
 }
 
-.centrage {text-align: center;}
+.centrage {
+  text-align: center;
+}
 
-#card-text{
+#card-text {
   text-align: right;
 }
 
-.character_sign{
+.character_sign {
   font-family: "Pinyon Script", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 200%;
 }
 
-.imagedefond { 
+.imagedefond {
   background-image: url("./images/background-characterone.jpeg");
   background-size: cover;
   height: 100%;
- }
+}
 
- /* .btn-rnd {
+/* .btn-rnd {
 margin-left: 20%;
  } */
 
- .global{
+.global {
   max-width: 500px;
   text-align: center;
- }
+}

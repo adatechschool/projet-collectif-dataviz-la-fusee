@@ -16,8 +16,6 @@ header {
    display: flex;
    justify-content: space-between;
    box-shadow: 0 5px 5px #bfde42ff;
-   overflow: auto;
-   scrollbar-gutter: stable;
 }
 
 #nav {
@@ -36,7 +34,6 @@ header {
 }
 
 main {
-   height: 100%;
    display: flex;
    flex-direction: column;
    overflow: auto;
@@ -250,4 +247,481 @@ main {
    margin: 0 1%;
    display: flex;
    justify-content: space-between;
+}html,
+body {
+    margin: 0 auto;
+    width: 100vw;
+    scroll-padding-top: 85px;
+}
+
+/**************************** Header & Navbar ***********************************/
+header {
+    width: 100%;
+    position: sticky;
+    margin: 0;
+    padding: 10px 5px;
+    top: 0;
+    background-color: #42b4caff;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 5px 5px #bfde42ff;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+}
+
+#nav {
+    flex: 1;
+    margin-right: 35px;
+    vertical-align: middle;
+}
+
+.nav-dropdown {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+    font-size: large;
+}
+
+#nav a {
+    color: black;
+    font-style: normal;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    text-shadow: #bfde42ff 1px 0 10px;
+}
+
+.current-page {
+    font-weight: bold;
+    text-shadow: #bfde42ff 1px 0 10px;
+}
+
+.drop-btn {
+    width: 100%;
+    height: 100%;
+    text-align: end;
+    font-weight: bolder;
+    font-size: large;
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 635px) {
+    #nav {
+        position: relative;
+        display: inline-block;
+    }
+
+    .drop-btn {
+        display: block;
+    }
+
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50px;
+    }
+
+    .nav-link {
+        display: block;
+        background-color: #42b4caff;
+        box-shadow: 0 5px 5px #bfde42ff;
+        border: black 1px solid;
+    }
+
+    .show .drop-btn {
+        box-shadow: 0 5px 5px #bfde42ff;
+        border: black 1px solid;
+    }
+
+    .show .drop-btn i {
+      display: none;
+    }
+
+    .show .nav-dropdown{
+        display: block;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    scrollbar-gutter: stable;
+}
+
+/********************************* Index ***************************************/
+#rnd-btn-container {
+    width: 99%;
+    margin: 25px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.btn-rnd {
+    width: 250px;
+    flex: 1;
+    background-color: #42b4caff;
+    border: none;
+    border-radius: 50px;
+}
+
+.btn-rnd:hover {
+    cursor: pointer;
+    box-shadow: 3px 5px 5px #bfde42ff;
+    text-shadow: #bfde42ff 1px 0 10px;
+}
+
+.btn-rnd p {
+    color: black;
+    font-style: normal;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/******************************* Page One Episode ******************************************/
+#episode_title {
+    margin-left: 2vw;
+}
+
+.episode {
+    margin: auto 2%;
+    width: 96%;
+}
+
+.episode h1 {
+    margin-bottom: 5px;
+    color: black;
+    text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+}
+
+.episode_subtitle {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.episode_code,
+.episode_aired {
+    margin: 10px 5px;
+}
+
+.episode_characters {
+    width: 100%;
+}
+
+.collapsible_characters {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #42b4caff;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible_characters:hover {
+    box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+}
+
+.collapsible_characters p {
+    margin: 10px;
+}
+
+.hidden_content {
+    display: none;
+}
+
+.active_content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    justify-content: center;
+}
+
+.ep_char_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.ep_char_list li {
+    width: 180px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ep_char_list p {
+    margin: 0 5px;
+    width: 100%;
+    text-wrap: balance;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.ep_char_list a {
+    border-radius: 50%;
+    border: solid #42b4caff 2px;
+    color: black;
+    text-decoration: none;
+}
+
+.ep_char_list a:hover {
+    border-color: black;
+    box-shadow: 1px 3px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+    font-weight: bold;
+}
+
+/* *********************** Page All Characters *******************/
+
+#charContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    /* gap: 1vw; */
+    column-gap: 1vw;
+    row-gap: 2.5vh;
+}
+
+.charContainers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 235px;
+    /* height: 235px; */
+    max-height: 235px;
+    box-sizing: border-box;
+    border: 2px solid #42b4caff;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px #bfde42ff;
+    transition: all ease-in-out 125ms;
+}
+
+.charContainers:hover {
+    box-shadow: 4px 4px 10px #bfde42ff;
+    /* color: #42b4caff; */
+    font-size: large;
+    text-shadow: 1px 1px 5px #bfde42ff;
+    cursor: pointer;
+}
+
+.charContainers img {
+    width: 85%;
+    padding: 1vh 1vw 0.5vh 1vw;
+    border-radius: 50px;
+}
+
+.charContainers div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 3vh;
+}
+
+#subNavBar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 2%;
+    padding: 1%;
+}
+
+#subNavBar input {
+    text-align: center;
+    width: 25px;
+}
+
+/* Episode ALL style */
+
+.navContainer {
+  display: flex;
+  min-height: 5vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column; /* Sidebar items vertically */
+  position: fixed;
+  width: 70px; /* Fixed sidebar width */
+  height: 60vh;
+
+  padding-top: 10px;
+  justify-content: stretch;
+}
+
+.sidebar a {
+  flex-grow: 1;
+  display: block;
+  align-items: center; /* Centers the link text vertically */
+  justify-content: center; /* Centers the link text horizontally */
+  padding: 5px;
+  /* margin-bottom: 10px; */
+  background-color: #42b3ca8e;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 5px 0 0 #bfde428f;
+}
+
+.sidebar a:hover {
+  background-color: #bfde428f;
+  box-shadow: 5px 0 0 #42b3ca8e;
+}
+
+.content-area {
+  flex-grow: 1; /* Takes up the remaining space */
+  padding: 20px;
+  padding-left: 72px;
+}
+
+.page-title {
+  padding: 20px;
+}
+
+.season-container {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px; /* Space between seasons */
+}
+.season {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255);
+  text-shadow: rgba(66, 179, 202);
+  text-align: center;
+}
+h2.season {
+  font-size: 50px;
+}
+.episodes-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between episodes */
+  width: 80vw;
+}
+
+.episodeUniAll {
+  /* flex: 1 1 100px; Flex basis of 200px with ability to grow and shrink */
+  padding: 10px;
+  /* background-color: rgba(255, 255, 255, 0.8); Semi-transparent background */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); Subtle shadow for depth */
+  border: 2px solid rgba(66, 179, 202, 0.555);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(191, 222, 66, 0.562);
+}
+
+/* .backgroundImg0 {
+   position: relative;
+ }
+ 
+ .backgroundImg0:after {
+   content: "";
+   background: url("images/season0.png") no-repeat center center;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   opacity: 0.2;  Here is your opacity 
+ } 
+ */
+
+.episode-number,
+.episode-name {
+  margin: 5px 0;
+}
+
+/* -------------------------------- */
+@media (max-width: 800px) {
+  .navContainer {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%; /* Full width */
+    height: 50px;
+    display: flex;
+
+    flex-direction: row; /* Align items horizontally */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    justify-content: stretch;
+    /* color: rgba(191, 222, 66, 0.562); */
+  }
+
+  .nav__item {
+    flex: 1; /*Distributes space evenly among items */
+    border-bottom: none; /* Removes the border */
+    text-align: center; /* Optional: centers text */
+  }
+}
+
+/********************** Page locations **************************************/
+.location-header {
+    margin: 20px 2vw;
+    color: black;
+    text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+}
+
+#locations-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#locations-list li {
+    width: 290px;
+    height: 160px;
+    padding: 20px 15px;
+    border: 2px solid #42b4caff;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px #bfde42ff;
+    box-sizing: border-box;
+    column-gap: 1vw;
+    row-gap: 2.5vh;
+}
+
+#locations-list h2 {
+    display: block;
+    height: 60px;
+    margin: 0;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 5px #42b4caff, 0 0 1em #bfde42ff, 0 0 0.2em #bfde42ff;
+}
+
+#locations-list p {
+    margin: 5px;
+}
+
+#pagination-locations {
+    width: 98%;
+    margin: 0 1%;
+    display: flex;
+    justify-content: space-between;
 }
